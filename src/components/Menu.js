@@ -8,11 +8,7 @@ import {
   Collapse,
   NavLink,
   Input,
-  Container,
-  Row,
-  Col,
-  Form,
-  Button
+  Form
 } from "reactstrap";
 import "./styles/menu.css";
 export default function Menu(props) {

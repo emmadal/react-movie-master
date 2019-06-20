@@ -4,11 +4,10 @@ import {
   MDBCarouselCaption,
   MDBCarouselInner,
   MDBCarouselItem,
-  MDBView,
-  MDBMask
+  MDBView
 } from "mdbreact";
 
-export default function PresentationPage(props) {
+export default function PresentationPage() {
   return (
     <>
       <MDBCarousel

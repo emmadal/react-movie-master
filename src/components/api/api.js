@@ -38,3 +38,5 @@ const genremovies = {
 };
 
 export { latestmovies, popularmovies, populartvshows, genremovies };
+
+const test  = 'backdrop_path - poster_path'
