@@ -1,64 +1,50 @@
 import React from "react";
 import {
   MDBCarousel,
-  MDBCarouselCaption,
   MDBCarouselInner,
   MDBCarouselItem,
   MDBView
 } from "mdbreact";
+import "./styles/presentationpage.css";
 
 export default function PresentationPage() {
+  
   return (
     <>
       <MDBCarousel
         activeItem={1}
         length={3}
-        showControls={true}
-        showIndicators={true}
+        showControls={false}
+        showIndicators={false}
         className="z-depth-1"
       >
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">
             <MDBView>
               <img
-                className="d-block w-100 img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                className="d-block w-500 img-fluid"
+                src="https://image.tmdb.org/t/p/original/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
                 alt="First slide"
               />
-              {/* <MDBMask overlay="black-light" /> */}
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Light mask</h3>
-              <p>First text</p>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
               <img
                 className="d-block w-100 img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                src="https://image.tmdb.org/t/p/original/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg"
                 alt="Second slide"
               />
-              {/* <MDBMask overlay="black-light" /> */}
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Strong mask</h3>
-              <p>Second text</p>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView>
               <img
-                className="d-block img-fluid w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                className="d-block w-100 img-fluid"
+                src="https://image.tmdb.org/t/p/original/pU3bnutJU91u3b4IeRPQTOP8jhV.jpg"
                 alt="Third slide"
               />
-             {/*  <MDBMask overlay="black-slight" /> */}
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Slight Mast</h3>
-              <p>Third text</p>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>

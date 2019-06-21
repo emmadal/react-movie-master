@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Menu from "./Menu";
-import PresentationPage from "./PresentationPage";
+/* import PresentationPage from "./PresentationPage"; */
 import PopularMovies from "./PopularMovies";
 import PopularTvShows from "./PopularTvShows";
 import UpcomingMovies from "./UpcomingMovies";
@@ -15,7 +15,7 @@ export default function Home() {
 
   /* console.log(popularmovies);
   console.log(populartvshows); */
-  console.log(upcomingmovies);
+  //console.log(popularmovies);
 
   async function fetchDataMovies() {
     const remoteurl = await axios.get(
@@ -61,8 +61,8 @@ export default function Home() {
 
   return (
     <div>
-      <Menu items={["Favorites", "Get started", "Genres", "Tv Shows"]} />
-      <PresentationPage />
+      <Menu items={["Top Rated", "Now Playing", "Recommandations", "Tv Shows"]} />
+      {/* <PresentationPage /> */}
       <PopularMovies title="Popular Movies" movies={popularmovies} />
       <PopularTvShows title="Popular TV Shows" tvshows={populartvshows} />
       <UpcomingMovies title="Upcoming Movies" upcoming={upcomingmovies} />

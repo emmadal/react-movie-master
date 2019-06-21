@@ -6,13 +6,13 @@ export default function PopularMovies(props) {
   return (
     <Container fluid>
       <Row className="mt-5">
-        <Col sm="12" className="col-movies">
-          <h2 className="h2-responsive text-white">
+        <Col sm="12" className="col-movies mt-5">
+          <h2 className="h2-responsive text-white font-weight-bold">
             {props.title} <i className="fa fa-star" />
           </h2>
           <hr className="hr-light" />
           <div className="card-movies">
-            {props.movies.map((data, key) => (
+            {props.movies.slice(0, 18).map((data, key) => (
               <MDBCard key={key} className="my-3">
                 <MDBCardImage
                   className="img-fluid"
