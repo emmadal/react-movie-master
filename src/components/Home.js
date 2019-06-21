@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Menu from "./Menu";
 /* import PresentationPage from "./PresentationPage"; */
 import PopularMovies from "./PopularMovies";
 import PopularTvShows from "./PopularTvShows";
@@ -61,7 +60,6 @@ export default function Home() {
 
   return (
     <div>
-      <Menu items={["Top Rated", "Now Playing", "Recommandations", "Tv Shows"]} />
       {/* <PresentationPage /> */}
       <PopularMovies title="Popular Movies" movies={popularmovies} />
       <PopularTvShows title="Popular TV Shows" tvshows={populartvshows} />
