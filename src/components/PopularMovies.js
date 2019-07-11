@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Col, Row } from "reactstrap";
-import { MDBCard, MDBCardImage } from "mdbreact";
+import {Media} from 'reactstrap'
 import "./styles/popularmovies.css";
+import { Link, Route } from "react-router-dom";
+import PopularMoviesPage from "./pages/PopularMoviesPage";
 export default function PopularMovies(props) {
   return (
     <Container fluid>
@@ -13,13 +15,22 @@ export default function PopularMovies(props) {
           <hr className="hr-light" />
           <div className="card-movies">
             {props.movies.slice(0, 18).map((data, key) => (
-              <MDBCard key={key} className="my-3">
-                <MDBCardImage
-                  className="img-fluid"
-                  src={`https://image.tmdb.org/t/p/w200${data.poster_path}`}
-                  waves
+              <div key={key}>
+                <Link
+                  to={`/popular-movies/${data.original_title}`}
+                  className="my-3"
+                >
+                  <Media
+                    className="img-fluid"
+                    src={`https://image.tmdb.org/t/p/w200${data.poster_path}`}
+                    middle
+                  />
+                </Link>
+                <Route
+                  path="/popular-movies"
+                  render={() => <PopularMoviesPage fulldata={props.movies}/>}
                 />
-              </MDBCard>
+              </div>
             ))}
           </div>
         </Col>
